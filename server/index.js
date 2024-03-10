@@ -14,10 +14,12 @@ app.use(express.json());
 
 
 
+app.get('/', (req, res) => {
+  res.send('Your Express application is running on Vercel!');
+});
 
 app.get('/weather', async (req, res) => {
-  res.status(200).json('Welcome, your app is working well');
-})
+  
   try {
     const { location } = req.query;
     console.log('Location:', location); // Log the location received from the request
@@ -45,6 +47,7 @@ app.get('/weather', async (req, res) => {
     const forecastData = forecastResponse.data;
 
     res.json({ currentWeather: currentWeatherData, forecast: forecastData });
+    
   } catch (error) {
     console.error('Error fetching weather data:', error.response ? error.response.data : error.message);
     res.status(500).json({ error: 'Failed to fetch weather data' });
