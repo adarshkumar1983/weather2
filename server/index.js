@@ -18,6 +18,20 @@ app.get('/', (req, res) => {
   res.send('Your Express application is running on Vercel!');
 });
 
+app.get('/weather', (req, res) => {
+  // Mock weather data
+  const mockWeatherData = {
+    location: req.query.location,
+    temperature: 25, // Celsius
+    description: "Sunny",
+    humidity: 50, // Percentage
+    windSpeed: 10, // km/h
+  };
+
+  res.json({ weather: mockWeatherData });
+});
+
+
 app.get('/weather', async (req, res) => {
   
   try {
