@@ -15,8 +15,12 @@
     "debug": "^4.3.4",
     "dotenv": "^16.4.5",
     "express": "^4.17.1", 
-    "fsevents": "^2.3.3",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "fsevents": {
+      "version": "^2.3.3",
+      "optional": true,
+      "os": ["!linux"]
+    }
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
