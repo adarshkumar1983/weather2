@@ -101,6 +101,7 @@ async function fetchWeather(location) {
 
 // Weather endpoint handler
 app.get('/weather', async (req, res) => {
+  res.send('Your Express application is running on Vercel.........................................!');
   const { location } = req.query;
 
   try {
