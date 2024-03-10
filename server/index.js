@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
-app.use(express.json());
+
 const app = express();
 // const port = 5001;
 
@@ -9,6 +9,7 @@ const app = express();
 //   origin: 'https://weather2-lime.vercel.app',
 // }));
 app.use(cors())
+app.use(express.json());
 
 
 
