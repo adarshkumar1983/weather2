@@ -3,7 +3,7 @@ const cors = require('cors');
 const axios = require('axios');
 
 const app = express();
-const port=process.env.PORT || 5001;
+const port= 5001;
 
 // app.use(cors({
 //   origin: 'https://weather2-lime.vercel.app',
@@ -61,6 +61,6 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-module.exports = app;
+// module.exports = app;
 
 
